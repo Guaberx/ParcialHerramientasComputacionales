@@ -1,0 +1,19 @@
+1. Que tipo de errores se presentaron o se pueden presentar con su implementaci ́on al
+problema?
+
+Pueden presentarse errores al introducir los datos por el usuario.
+Este tipo de error se maneja atrapando la excepcion y dandole un mensaje,
+a manera de feedback, al usuario, sin terminar la ejecucion de la aplicacion.
+
+Se tiene en cuenta que en caso de estos errores, no se deberia continuar con
+la ejecucion del metodo actual y se vuelve al menu principal
+
+Es posible que se hayan omitido errores especificos, todos ligados a
+cuando el usuario introduce los datos al utilizar el programa.
+
+
+
+2. Que estrategias podr ́ıa usar para solucionar estos errores?
+
+Se deberian hacer pruebas unitarias de "edge cases" para probar
+posibles problemas que pueda producir los datos que introduce el usuario
