@@ -56,7 +56,7 @@ class Tienda:
     def checkSesionActive(self):
         if(not self.isSessionActive()):
             raise Exception('No hay sesion de usuario activa')
-    
+
     def checkCart(self):
         self.checkSesionActive()
         if(not self.currentSession['id'] in self.carts):
@@ -133,6 +133,7 @@ class Tienda:
         '''
         # Calcular Pago total
         self.checkSesionActive()
+        self.checkCart()
         currentCart = self.carts[self.currentSession['id']]
         total = 0
         for i in currentCart:
@@ -150,4 +151,6 @@ class Tienda:
 
         # Retornar resultado
         message = f"El {self.currentSession['clientType'].name} con cedula {self.currentSession['id']}, debe pagar {totalConDescuento} por los productos"
-        return message, self.carts[self.currentSession['id']]
+        # Reiniciar Carrito
+        self.carts[self.currentSession['id']] = {}
+        return message

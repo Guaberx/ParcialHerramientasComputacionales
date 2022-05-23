@@ -3,12 +3,12 @@ import Tienda
 
 def main():
     productos = [
-        {"name": "Papas", "price": 1000},
-        {"name": "Sopa", "price": 1500},
-        {"name": "Chicle", "price": 300},
-        {"name": "Pan", "price": 500},
-        {"name": "Tomate", "price": 500},
-        {"name": "Manzana", "price": 1200},
+        {"name": "Papas", "price": 1000, "stock": 1000},
+        {"name": "Sopa", "price": 1500, "stock": 1000},
+        {"name": "Chicle", "price": 300, "stock": 1000},
+        {"name": "Pan", "price": 500, "stock": 1000},
+        {"name": "Tomate", "price": 500, "stock": 1000},
+        {"name": "Manzana", "price": 1200, "stock": 1000},
     ]
     tienda = Tienda.Tienda(productos)
     interfaz = Tienda.Interfaz(tienda)
